@@ -20,6 +20,7 @@ header{
     justify-content: space-between;
     height: 10%;
     background-color: #EAEAEA; 
+    
 }
 
 .input-group-text{
@@ -49,6 +50,7 @@ header{
 }
 .contacts-nav{
     width: 30%;
+    border-right: 0.5px solid black;
    
 }
 .chat-info{
