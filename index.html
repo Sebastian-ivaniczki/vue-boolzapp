@@ -90,6 +90,7 @@
                             <div v-if="message.status === 'sent'" class="chat-message me">
                                 <p>{{ message.text }}</p>
                                 <span class="message-date">{{ message.date }}</span>
+                                
                             </div>
                             <div v-else class="chat-message friend">
                                 <p>{{ message.text }}</p>
@@ -102,7 +103,7 @@
                 <footer class="chat-footer">
                     <div class="input-group">
                         <span class="input-group-text"><i class="fa-regular fa-face-smile"></i></span>
-                        <input type="text" class="form-control">
+                        <input v-model="newMessage" @keyup.enter="sendMessage" type="text" class="form-control">
                         <span class="input-group-text"><i class="fa-solid fa-microphone"></i></span>
                     </div>
                 </footer>

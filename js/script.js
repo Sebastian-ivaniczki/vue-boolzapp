@@ -2,6 +2,7 @@
 const app = Vue.createApp({
     data(){
         return{
+          newMessage: '',
           curentIndex: 0,
             contacts: [
                 {
@@ -90,7 +91,15 @@ const app = Vue.createApp({
       setCurrentIndex(index) {
         this.curentIndex = index;
         console.log(this.curentIndex)
-      }
+      },
+      sendMessage() {
+        this.contacts[this.curentIndex].messages.push({
+            date: new Date().toString(),
+            text: this.newMessage,
+            status: 'sent'
+        });
+        this.newMessage = '';
+    }
     }
 });
 
