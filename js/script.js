@@ -87,6 +87,18 @@ const app = Vue.createApp({
               ]
         }
       },
+      computed: {
+        currentDateTime() {
+          const date = new Date();
+          const day = date.getDate();
+          const month = date.getMonth() + 1;
+          const year = date.getFullYear();
+          const hours = date.getHours();
+          const minutes = date.getMinutes();
+          const seconds = date.getSeconds();
+          return `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
+        }
+      },
     methods:{
       setCurrentIndex(index) {
         this.curentIndex = index;
@@ -94,13 +106,13 @@ const app = Vue.createApp({
       },
       sendMessage() {
         this.contacts[this.curentIndex].messages.push({
-            date: new Date().toString(),
+            date: this.currentDateTime,
             text: this.newMessage,
             status: 'sent'
         });
         setTimeout(() => {
           this.contacts[this.curentIndex].messages.push({ 
-            date: new Date().toString(),
+            date: this.currentDateTime,
             text: 'ok', 
           status: 'received' });
       }, 1000); 
