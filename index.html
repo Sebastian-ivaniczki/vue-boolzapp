@@ -60,7 +60,7 @@
                 </div>
                     <!-- contact -->
                 <div class="contacts">
-                    <div v-for="(contact, i) in contacts" class="contact-info mt-2">
+                    <div v-for="(contact, i) in contacts" class="contact-info mt-2" @click="setCurrentIndex(i)">
                         <img :src="'img/avatar'+contact.avatar+'.jpg'" :alt="contact.name">
                         <span class="contact-name">{{ contact.name }}</span>
                     </div>
@@ -85,16 +85,18 @@
                 <!-- main chat 'body' -->
                 <main class="chat-window">
                     <div class="chat-container">
-                        <div class="chat-message-container">
-                            <div class="chat-message me">
-                                <p>Ciao! Come va?</p>
+       
+                        <div class="chat-message-container" v-for="(message, i) in contacts[curentIndex].messages">
+                            <div v-if="message.status === 'sent'" class="chat-message me">
+                                <p>{{ message.text }}</p>
                             </div>
-                            
-                            <div class="chat-message friend">
-                                <p>Ciao! Tutto bene, grazie. E tu?</p>
+                            <div v-else class="chat-message friend">
+                                <p>{{ message.text }}</p>
                             </div>
                         </div>
+                        
                     </div>
+                </main>    
                 <footer class="chat-footer">
                     <div class="input-group">
                         <span class="input-group-text"><i class="fa-regular fa-face-smile"></i></span>

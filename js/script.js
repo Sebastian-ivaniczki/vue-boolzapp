@@ -1,7 +1,8 @@
-console.log(Vue)
+
 const app = Vue.createApp({
     data(){
         return{
+          curentIndex: 0,
             contacts: [
                 {
                   name: 'Michele',
@@ -84,6 +85,12 @@ const app = Vue.createApp({
                 },
               ]
         }
+    },
+    methods:{
+      setCurrentIndex(index) {
+        this.curentIndex = index;
+        console.log(this.curentIndex)
+      }
     }
 });
 
