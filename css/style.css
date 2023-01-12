@@ -25,6 +25,13 @@ header{
 .input-group-text{
     cursor: pointer;
 }
+.chat-tools{
+    color: #B1B1B1;
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+    margin-right: 1rem;
+}
 /* app display aestetic */
 .app-display{
     background-color: #fff;
@@ -32,15 +39,20 @@ header{
     height: 95%;
     /* display */
     display: flex;
-
+    box-shadow: 5px 10px 18px #4d4d52;
 }
 .contacts-nav{
     width: 30%;
-    background-color: blue;
+   
 }
 .chat-info{
     width: 70%;
     background-color: yellowgreen;
+}
+
+.contact-info:hover {
+    background-color: #E9EBEB;
+    cursor: pointer;
 }
 /* right nav style */
 
@@ -55,7 +67,7 @@ background-color: #8EDAFC ;
 .contacts{
     margin-top: 0.3rem;
     height: 72%;
-    background-color: blueviolet;
+    background-color: #fff;
     overflow-y: auto;
 }
 .contact-name{
