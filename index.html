@@ -89,9 +89,11 @@
                         <div class="chat-message-container" v-for="(message, i) in contacts[curentIndex].messages">
                             <div v-if="message.status === 'sent'" class="chat-message me">
                                 <p>{{ message.text }}</p>
+                                <span class="message-date">{{ message.date }}</span>
                             </div>
                             <div v-else class="chat-message friend">
                                 <p>{{ message.text }}</p>
+                                <span class="message-date">{{ message.date }}</span>
                             </div>
                         </div>
                         

@@ -138,3 +138,7 @@ justify-content: space-around;
     align-self: flex-start;
     background-color: lightgray;
 }
+.message-date{
+    font-size: 10px;
+    
+}
