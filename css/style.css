@@ -1,10 +1,42 @@
+/* body backround */
 body{
     height: 100vh;
     background: linear-gradient(to bottom, #009688 20%, #DBDBD2 6%);
 }
-
+/* app display aestetic */
 .app-display{
     background-color: #fff;
     width: 80%;
     height: 95%;
+    /* display */
+    display: flex;
+
+}
+.contacts-nav{
+    width: 30%;
+    background-color: blue;
+}
+.chat-info{
+    width: 70%;
+    background-color: yellowgreen;
+}
+/* right nav style */
+.right-nav-header{
+    
+    height: 10%;
+    background-color:aquamarine;
+}
+.notifications{
+height: 12%;
+background-color: #8EDAFC ;
+}
+.serch-contact{
+    
+    background-color: #FAFAFA;
+}
+.contacts{
+    margin-top: 0.3rem;
+    height: 72%;
+    background-color: blueviolet;
+    overflow-y: auto;
 }
