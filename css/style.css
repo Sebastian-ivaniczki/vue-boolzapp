@@ -6,13 +6,20 @@ body{
 /* general */
 
 img{
-    width: 4rem; 
-    height: 4rem;
+    width: 3.5rem; 
+    height: 3.5rem;
     margin-left: 1rem;
-    margin-top: 1.5rem;
+    
     border-radius: 50%;
 
     object-fit: cover;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10%;
+    background-color: #EAEAEA; 
 }
 /* app display aestetic */
 .app-display{
@@ -32,11 +39,7 @@ img{
     background-color: yellowgreen;
 }
 /* right nav style */
-.right-nav-header{
-    
-    height: 10%;
-    background-color:aquamarine;
-}
+
 .notifications{
 height: 12%;
 background-color: #8EDAFC ;
@@ -53,5 +56,5 @@ background-color: #8EDAFC ;
 }
 .contact-name{
     margin-left: 2rem;
-    
 }
+    /*chat aestetic  */
