@@ -99,7 +99,7 @@ const app = Vue.createApp({
             status: 'sent'
         });
         this.newMessage = '';
-    }
+      }
     }
 });
 

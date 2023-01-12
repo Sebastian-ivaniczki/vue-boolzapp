@@ -33,7 +33,7 @@
                     <header class="right-nav-header">
                         <div class="contact-info ">
                             <img src="img/avatar_1.jpg" alt="avatar_1">
-                            <span class="contact-name">Michele</span>
+                            <span class="contact-name">IO</span>
                         </div>
                         <!-- chat tools -->
                         <div class="chat-tools">
@@ -72,8 +72,8 @@
                 <!-- chat header -->
                 <header class="chat-header">
                     <div class="contact-info ">
-                        <img src="img/avatar_1.jpg" alt="avatar_1">
-                        <span class="contact-name">Michele</span>
+                        <img :src="'img/avatar'+contacts[curentIndex].avatar+'.jpg'" :alt="contacts[curentIndex].name">
+                        <span class="contact-name">{{ contacts[curentIndex].name }}</span>
                     </div>
                     <!-- chat tools -->
                     <div class="chat-tools">
