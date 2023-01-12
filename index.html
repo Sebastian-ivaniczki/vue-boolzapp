@@ -17,13 +17,16 @@
   />
     <!-- my style -->
    <link rel="stylesheet" href="css/style.css">
+    <!-- vue js -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
    <!-- js -->
    <script defer src="js/script.js"></script>
     <title>BoolzApp</title>
 </head>
 <body>
-    <div class="container d-flex justify-content-center align-items-center h-100">
+    
+    <div id="root" class="container d-flex justify-content-center align-items-center h-100">
         <div class="app-display">
             <!-- contacts nav -->
             <div class="contacts-nav">
@@ -57,9 +60,9 @@
                 </div>
                     <!-- contact -->
                 <div class="contacts">
-                    <div class="contact-info mt-2">
-                        <img src="img/avatar_1.jpg" alt="avatar_1">
-                        <span class="contact-name">Michele</span>
+                    <div v-for="(contact, i) in contacts" class="contact-info mt-2">
+                        <img :src="'img/avatar'+contact.avatar+'.jpg'" :alt="contact.name">
+                        <span class="contact-name">{{ contact.name }}</span>
                     </div>
                     
                 </div>
