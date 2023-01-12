@@ -3,6 +3,17 @@ body{
     height: 100vh;
     background: linear-gradient(to bottom, #009688 20%, #DBDBD2 6%);
 }
+/* general */
+
+img{
+    width: 4rem; 
+    height: 4rem;
+    margin-left: 1rem;
+    margin-top: 1.5rem;
+    border-radius: 50%;
+
+    object-fit: cover;
+}
 /* app display aestetic */
 .app-display{
     background-color: #fff;
@@ -39,4 +50,8 @@ background-color: #8EDAFC ;
     height: 72%;
     background-color: blueviolet;
     overflow-y: auto;
+}
+.contact-name{
+    margin-left: 2rem;
+    
 }
