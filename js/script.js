@@ -86,7 +86,7 @@ const app = Vue.createApp({
                 },
               ]
         }
-    },
+      },
     methods:{
       setCurrentIndex(index) {
         this.curentIndex = index;
@@ -98,8 +98,14 @@ const app = Vue.createApp({
             text: this.newMessage,
             status: 'sent'
         });
+        setTimeout(() => {
+          this.contacts[this.curentIndex].messages.push({ 
+            date: new Date().toString(),
+            text: 'ok', 
+          status: 'received' });
+      }, 1000); 
         this.newMessage = '';
-      }
+      },
     }
 });
 
