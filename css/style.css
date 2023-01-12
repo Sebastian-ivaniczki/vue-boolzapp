@@ -21,6 +21,10 @@ header{
     height: 10%;
     background-color: #EAEAEA; 
 }
+
+.input-group-text{
+    cursor: pointer;
+}
 /* app display aestetic */
 .app-display{
     background-color: #fff;
@@ -58,3 +62,17 @@ background-color: #8EDAFC ;
     margin-left: 2rem;
 }
     /*chat aestetic  */
+.chat-window{
+    height: 78%;
+    background-color: #fff;
+    overflow-y: auto;
+}
+.chat-footer{
+    height: 12%;
+    background-color: #F3EEEA;
+    display: flex;
+    align-items: center;
+}
+.chat-window{
+    background-image: url(../img/mine.jpg);
+}
