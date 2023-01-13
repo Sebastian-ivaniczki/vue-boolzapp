@@ -55,12 +55,12 @@
                 <div class="serch-contact">
                     <div class="input-group">
                         <button class="btn btn-outline-secondary"><i class="fa-solid fa-magnifying-glass"></i></button>
-                        <input type="text" class="form-control" placeholder="cerca contatto" >
+                        <input v-model="serchTerm" type="text" class="form-control" placeholder="cerca contatto" >
                     </div>
                 </div>
                     <!-- contact -->
                 <div class="contacts">
-                    <div v-for="(contact, i) in contacts" class="contact-info mt-2" @click="setCurrentIndex(i)">
+                    <div v-for="(contact, i) in filteredContacts" class="contact-info mt-2" @click="setCurrentIndex(i)">
                         <img :src="'img/avatar'+contact.avatar+'.jpg'" :alt="contact.name">
                         <span class="contact-name">{{ contact.name }}</span>
                     </div>

@@ -3,6 +3,7 @@ const app = Vue.createApp({
     data(){
         return{
           newMessage: '',
+          serchTerm: '',
           curentIndex: 0,
             contacts: [
                 {
@@ -97,8 +98,13 @@ const app = Vue.createApp({
           const minutes = date.getMinutes();
           const seconds = date.getSeconds();
           return `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
-        }
+        },
+        filteredContacts() {
+          return this.contacts.filter(contact => {
+              return contact.name.toLowerCase().includes(this.serchTerm.toLowerCase());
+          });
       },
+     },
     methods:{
       setCurrentIndex(index) {
         this.curentIndex = index;
