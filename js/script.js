@@ -114,6 +114,11 @@ const app = Vue.createApp({
         this.curentIndex = index;
         console.log(this.curentIndex)
       },
+      //setto il visible a true
+      setVisible(contact){
+        this.contacts.forEach(contact => contact.visible = false);
+        contact.visible = true;
+      },
       sendMessage() {
         this.contacts[this.curentIndex].messages.push({
             date: this.currentDateTime,
