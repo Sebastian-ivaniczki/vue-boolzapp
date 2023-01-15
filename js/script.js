@@ -104,7 +104,11 @@ const app = Vue.createApp({
               return contact.name.toLowerCase().includes(this.serchTerm.toLowerCase());
           });
       },
-     },
+     }, 
+     //imposto il visible a false
+     created(){
+      this.contacts.forEach(contact => contact.visible = false);
+    },
     methods:{
       setCurrentIndex(index) {
         this.curentIndex = index;
