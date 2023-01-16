@@ -100,9 +100,10 @@ const app = Vue.createApp({
           return `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
         },
         filteredContacts() {
-          return this.contacts.filter(contact => {
-              return contact.name.toLowerCase().includes(this.serchTerm.toLowerCase());
-          });
+          return this.contacts.map(contact => {
+            contact.visible = this.isVisible(contact)
+            return contact;
+         });
       },
      }, 
      
@@ -111,6 +112,9 @@ const app = Vue.createApp({
       setCurrentIndex(index) {
         this.curentIndex = index;
         console.log(this.curentIndex)
+      },
+      isVisible(contact) {
+        return contact.name.toLowerCase().includes(this.serchTerm.toLowerCase());
       },
       
       sendMessage() {
